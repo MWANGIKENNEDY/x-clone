@@ -34,4 +34,4 @@ const Image = ({ path, w, h, alt, className, tr }: ImageTypes) => {
 };
 
 export default Image;
-0;
+
