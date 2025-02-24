@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss";
+// tailwind.config.ts
+
+import animatePlugin from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -66,9 +69,9 @@ export default {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    function ({ addUtilities }) {
-      const newUtilities = {
+    animatePlugin,
+    function ({ addUtilities }: { addUtilities: Config["plugins"][0] }) {
+      const newUtilities: Record<string, Record<string, string>> = {
         ".no-scrollbar::-webkit-scrollbar": {
           display: "none",
         },
