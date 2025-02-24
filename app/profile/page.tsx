@@ -61,7 +61,7 @@ const ProfilePage = () => {
         </div>
 
 
-        <div className="flex justify-between mt-5 border-b-2 border-borderGray  bg-black text-white overflow-x-scroll w-full  no-scrollbar">
+        <div className="flex justify-between mt-5 border-b-2 border-borderGray  bg-black text-white overflow-x-scroll w-full  scrollbar-hide">
           <div className="flex  hover:bg-gray-400/30 justify-center grow px-[16px]  ">
             <div className="border-b-4 border-blue-400 px-2 py-[16px] w-full  flex justify-center ">
               <span>Posts</span>

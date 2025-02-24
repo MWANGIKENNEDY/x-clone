@@ -70,18 +70,6 @@ export default {
   },
   plugins: [
     animatePlugin,
-    function ({ addUtilities }: { addUtilities: Config["plugins"][0] }) {
-      const newUtilities: Record<string, Record<string, string>> = {
-        ".no-scrollbar::-webkit-scrollbar": {
-          display: "none",
-        },
-        ".no-scrollbar": {
-          "-ms-overflow-style": "none",
-          "scrollbar-width": "none",
-        },
-      };
-
-      addUtilities(newUtilities);
-    },
+	require('tailwind-scrollbar-hide')
   ],
 } satisfies Config;
