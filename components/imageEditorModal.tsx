@@ -15,7 +15,7 @@ const ImageEditorModal = ({
   setSettings,
 }: {
   previewURL: string;
-  setIsSettingsOpen: () => void;
+  setIsSettingsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   settings: {
     type: "original" | "wide" | "square";
     sensitive: boolean;
@@ -44,11 +44,11 @@ top section  */}
           <div className=" flex items-center gap-8">
             <FaBackspace
               className=" text-5xl cursor-pointer"
-              onClick={() => setIsSettingsOpen()}
+              onClick={() => setIsSettingsOpen(false)}
             />
             <h1 className=" text-lg font-semibold">Media settings</h1>
           </div>
-          <button onClick={()=>setIsSettingsOpen()} className=" bg-white px-4 py-2 rounded-full  text-gray-800 font-bold text-sm">
+          <button onClick={()=>setIsSettingsOpen(false)} className=" bg-white px-4 py-2 rounded-full  text-gray-800 font-bold text-sm">
             Save
           </button>
         </div>
